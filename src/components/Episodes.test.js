@@ -14,5 +14,7 @@ test('Episodes render', ()=> {
         summary: 'Test',
         runtime:'1 Hour'
     }]} />)
-})
-
+    
+    const episodes = screen.getByText(/season 12/i);
+    expect(episodes).toBeInTheDocument();
+});
